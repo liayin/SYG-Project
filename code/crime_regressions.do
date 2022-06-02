@@ -288,7 +288,7 @@ qui xtreg lmur subscript##(c.law i.year r20001 - r20164 c.(l_perc_police - l_wel
 eststo lmur6
 esttab lmur1 lmur2 lmur3 lmur4 lmur5 lmur6, keep(2.subscript#c.law) ///
 	starlevels(* 0.1 ** 0.05 *** 0.01) cells(b(star fmt(%9.3f)) se(par)) scalars(F r2) replace
-
+	
 	
 * around law-year
 qui xtreg lmur subscript##(c.law i.year) [aweight=popwt], fe vce(cluster state) 
